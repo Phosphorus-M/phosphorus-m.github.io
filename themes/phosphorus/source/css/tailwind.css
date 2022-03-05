@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "experience.css";
 
 @layer utilities {
     .tech-container{
