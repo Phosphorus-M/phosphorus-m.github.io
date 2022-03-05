@@ -181,8 +181,6 @@ uglify_js:
 
 clean_css:
   enable: false
-  exclude: 
-    - '*.min.css'
 
 
 
@@ -230,8 +228,6 @@ minify:
     enable: true
   css:
     enable: false
-    exclude:
-      - '*.min.css'
   js:
     enable: true
     exclude:
