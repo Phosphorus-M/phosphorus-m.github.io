@@ -1,0 +1,17 @@
+image: node:16.8.0 # use nodejs v14 LTS
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install hexo-cli -g
+  - npm install
+
+pages:
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

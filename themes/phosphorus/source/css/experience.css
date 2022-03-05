@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .sky{
+        width: 100%;
+        height: 450px;
+        background-color: #032a54;
+        background-repeat: repeat-x;
+        background-image: -khtml-gradient(linear, left top, left bottom, from(#011428), to(#032a54));
+        background-image: -moz-linear-gradient(top, #011428, #032a54);
+        background-image: -ms-linear-gradient(top, #011428, #032a54);
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #011428), color-stop(100%, #032a54));
+        background-image: -webkit-linear-gradient(top, #011428, #032a54);
+        background-image: -o-linear-gradient(top, #011428, #032a54);
+        background-image: linear-gradient(top, #011428, #032a54);
+        filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#011428', endColorstr='#032a54', GradientType=0);
+        margin-bottom: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .sky .stars {
+        width: 100%;
+        background: url('https://dellsystem.me/img/posts/night-sky-css/stars_small.png');
+
+        background-image: url("../images/stars_large.png");
+        background-repeat: repeat;
+        background-size: 30%;
+    }
+}

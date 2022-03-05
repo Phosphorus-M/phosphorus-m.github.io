@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .masonry-container {
+        position: relative;
+        margin: 20px auto 60px auto;
+        height: 500px;
+        
+    }
+    .masonry-container > div{
+        position: absolute;
+    }
+}

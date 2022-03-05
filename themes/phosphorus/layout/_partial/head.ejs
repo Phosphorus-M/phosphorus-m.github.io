@@ -1,0 +1,32 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=3.0">
+
+    <title><%= config.title %></title>
+    <meta name="description" content="Blog de contenido tecnico.">
+    <meta name="renderer" content="webkit">
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+    <link rel="sitemap" type="application/xml" href="<%= config.url %><%= config.root %>sitemap.xml" />
+
+    <%- favicon_tag('/icons/favicon-32x32.png') %>
+    <link rel="icon" href="<%= config.url %><%= config.root %>icons/favicon-32x32.png" type="image/png" />
+    <link rel="manifest" href="<%= config.url %><%= config.root %>manifest.json" crossorigin="anonymous" />
+
+    <link rel="apple-touch-icon" sizes="48x48" href="<%= config.url %><%= config.root %>icons/icon-48x48.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= config.url %><%= config.root %>icons/icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="96x96" href="<%= config.url %><%= config.root %>icons/icon-96x96.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= config.url %><%= config.root %>icons/icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="<%= config.url %><%= config.root %>icons/icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="<%= config.url %><%= config.root %>icons/icon-256x256.png" />
+    <link rel="apple-touch-icon" sizes="384x384" href="<%= config.url %><%= config.root %>icons/icon-384x384.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="<%= config.url %><%= config.root %>icons/icon-512x512.png" />
+
+    <meta name="theme-color" content="#663399"/>
+    <%- css('css/tailwind') %>
+    <%- css('css/phosphorus') %>
+    <% if(page.path.includes("experience")){ %>
+        <%- css('css/experience') %>
+    <% } %>
+</head>
