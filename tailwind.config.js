@@ -1,4 +1,5 @@
 module.exports = {
+  content: ["**/*.ejs", "**/*.md"],
   theme: {
     extend: {
       flexBasis: {
@@ -28,7 +29,6 @@ module.exports = {
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   content: [
     './themes/**/*.ejs',
-    './themes/phosphorus/layout/**/*.ejs',
     './public/**/*.html',
   ]
 }

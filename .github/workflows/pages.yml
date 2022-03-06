@@ -25,6 +25,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: imagemin
+        run: |
+          npm install -g imagemin-cli imagemin-pngquant
+          imagemin  public/images/* --plugin.pngquant.quality={0.1,0.5} --out-dir=public/images && imagemin  public/images/screenshots/* --plugin.pngquant.quality={0.1,0.5} --out-dir=public/images/screenshots
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

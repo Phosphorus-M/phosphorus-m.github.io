@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://phosphorus-m.github.io/
+url: https://phosphorus-moscu.gitlab.io/
 root: ""
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -104,84 +104,8 @@ theme: phosphorus
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
-
+  
 all_minifier: true
-
-asset_pipeline:
-  revisioning:
-    enable: true
-    keep: false
-    selectors:
-      'img[data-orign]':  data-orign
-      'img[data-src]': 'data-src'
-      'img[src]': 'src'
-      'link[rel="apple-touch-icon"]': 'href'
-      'link[rel="icon"]': 'href'
-      'link[rel="shortcut icon"]': 'href'
-      'link[rel="stylesheet"]': 'href'
-      'script[src]': 'src'
-      'source[src]': 'src'
-      'video[poster]': 'poster'
-      'video[src]': 'src'
-  clean_css:
-    enable: false
-  uglify_js:
-    enable: true
-  imagemin:
-    enable: true
-    interlaced: false
-    multipass: true
-    optimizationLevel: 3
-    pngquant: true
-    progressive: true
-  html_minifier:
-    enable: true
-    ignore_error: false
-    removeComments: true
-    removeCommentsFromCDATA: true
-    collapseWhitespace: true
-    collapseBooleanAttributes: true
-    removeEmptyAttributes: true
-    minifyJS: true
-    minifyCSS: false
-
-revisioning:
-  enable: true
-  keep: false
-  selectors:
-    'img[data-orign]':  data-orign
-    'img[data-src]': 'data-src'
-    'img[src]': 'src'
-    'link[rel="apple-touch-icon"]': 'href'
-    'link[rel="icon"]': 'href'
-    'link[rel="shortcut icon"]': 'href'
-    'link[rel="stylesheet"]': 'href'
-    'script[src]': 'src'
-    'source[src]': 'src'
-    'video[poster]': 'poster'
-    'video[src]': 'src'
-
-imagemin:
-  enable: true
-  interlaced: false
-  multipass: true
-  optimizationLevel: 3
-  pngquant: true
-  progressive: true
-
-
-
-uglify_js:
-  enable: true
-  mangle: true
-  output:
-  compress:
-  exclude: 
-    - '*.min.js'
-
-clean_css:
-  enable: false
-
 
 
 lazyload:
@@ -227,7 +151,9 @@ minify:
   html:
     enable: true
   css:
-    enable: false
+    enable: true
+    exclude:
+      - '*.min.css'
   js:
     enable: true
     exclude:
