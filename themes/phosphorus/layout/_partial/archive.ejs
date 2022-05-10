@@ -1,0 +1,47 @@
+<div class="masonry-container">
+
+<% if (pagination == 2){ %>
+    <% site.posts.data.forEach(function(post){ %>
+      <%- partial('article', {post: post, index: true}) %>
+    <% }) %>
+  <% } else { %>
+    <% var last; %>
+    <% site.posts.data.forEach(function(post, i){ %>
+      <% var year = post.date.year(); %>
+      <% if (last != year){ %>
+        <% if (last != null){ %>
+          </div></section>
+        <% } %>
+        <% last = year; %>
+        <section class="archives-wrap">
+          <div class="archive-year-wrap">
+            <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+          </div>
+          <div class="archives">
+      <% } %>
+      <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+    <% }) %>
+    <% if (site.posts.data.length){ %>
+      </div></section>
+    <% } %>
+  <% } %>
+  <% if (page.total > 1){ %>
+    <nav id="page-nav">
+      <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+      <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text,
+        escape: false
+      }) %>
+    </nav>
+  <% } %>
+  <%- js('js/minimasonry.min.js') %>
+<script>
+    var masonry = new MiniMasonry({
+        container: '.masonry-container',
+        minify: false,
+        baseWidth: 370,
+        gutter: 30
+    }); 
+</script>
+</div>

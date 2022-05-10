@@ -2,10 +2,18 @@
 <html lang="es" class="scroll-smooth" data-theme="">
 <%- partial('_partial/head') %>
 
-<body>
-    <%- body %>
+    <% if (page.layout==="post" && page.show==="list" ){ %>
+    <body class="bg-black">
+    <% } else { %>
+    <body>
+    <% } %>
+    <% if (page.layout==="post" ){ %>
+        <%- partial('another_layout') %>
+    <% } else { %>
+        <%= console.log(page) %>
+        <%- body %>
+    <% } %>
 
-
-</body>
+    </body>
 
 </html>

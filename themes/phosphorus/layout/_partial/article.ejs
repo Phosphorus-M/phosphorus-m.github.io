@@ -1,0 +1,46 @@
+<div>
+  <div class="transition-all hover:transition-all duration-800 ease-in-out hover:scale-110">
+    <div class="article-meta">
+      <%- partial('post/category') %>
+    </div>
+    <div
+      class=" overflow-hidden pb-2 flex basis-custom justify-between flex-col ">
+      <% if (post.image){ %>
+        <div>
+        <%- image_tag(post.image, {alt:post.title, class: null}) %>
+        </div>
+      <% } %>
+
+          <% if (post.link || post.title){ %>
+            <div class="container  px-3.5">
+              <%- partial('post/date', {class_name: 'article-date' , date_format: "MMM D, YYYY" }) %>
+              <%- partial('post/title', {class_name: 'text-lg font-semibold' }) %>
+            </div>
+          <% } %>
+
+
+          <% if (post.description){ %>
+            <div class="container  px-3.5">
+              <p>
+                <%- post.description %>
+              </p>
+            </div>
+          <% } %>
+
+
+          <% if (post.excerpt && index){ %>
+            <%- post.excerpt %>
+            <% if (theme.excerpt_link){ %>
+              <p class="article-more-link">
+              <a href="<%- url_for(post.path) %>#more">
+              <%= theme.excerpt_link %>
+              </a>
+              </p>
+            <% } %>
+          <% } else { %>
+          <% } %>
+
+
+    </div>
+  </div>
+</div>
