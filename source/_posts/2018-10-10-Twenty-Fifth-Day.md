@@ -3,6 +3,7 @@ layout: post
 title: "Vigésimo quinto día de #100DaysOfOcde"
 description: Algunas personas solo quieren ver al mundo arder...
 image: 'https://i.imgur.com/4DXH2pj.jpg'
+date: 2018-10-10 5:21:12
 category: '100DaysOfCode'
 tags:
 - challenge
