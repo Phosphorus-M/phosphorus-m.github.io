@@ -2,17 +2,17 @@
 <html lang="es" class="scroll-smooth" data-theme="">
 <%- partial('_partial/head') %>
 
-    <% if (page.layout==="post" && page.show==="list" ){ %>
-    <body class="bg-black">
+    <% if (page.layout==="another_layout" && page.show==="list" ){ %>
+    <body class="bg-[#141414]">
     <% } else { %>
     <body>
     <% } %>
     <% if (page.layout==="post" ){ %>
         <%- partial('another_layout') %>
     <% } else { %>
-        <%= console.log(page) %>
         <%- body %>
     <% } %>
+    
 
     </body>
 

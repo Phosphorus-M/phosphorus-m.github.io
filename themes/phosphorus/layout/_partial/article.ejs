@@ -1,15 +1,17 @@
-<div>
-  <div class="transition-all hover:transition-all duration-800 ease-in-out hover:scale-110">
+<div class="article-container">
+  <div class="transition-all hover:transition-all duration-800 ease-in-out hover:scale-110 article-item">
     <div class="article-meta">
       <%- partial('post/category') %>
     </div>
+    <% if (post.image){ %>
+      <div class="cover pb-2">
+      <svg width="50" height="50" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" class="loader"> <defs> <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="a"> <stop stop-color="currentColor" stop-opacity="0" offset="0%"></stop> <stop stop-color="currentColor" stop-opacity=".631" offset="63.146%"></stop> <stop stop-color="currentColor" offset="100%"></stop> </linearGradient> </defs> <g fill="none" fill-rule="evenodd"> <g transform="translate(1 1)"> <path d="M0,18.0000525 C0,27.9411416 8.05885836,36 18.0000525,36 C27.9411416,36 36,27.9411416 36,18.0000525" id="Oval-2" stroke="url(#a)" stroke-width="2"> <animateTransform attributeName="transform" type="rotate" from="360 18 18" to="0 18 18" dur="1.9s" repeatCount="indefinite"></animateTransform> </path> <circle fill="currentColor" cx="36" cy="18" r="1"> <animateTransform attributeName="transform" type="rotate" from="360 18 18" to="0 18 18" dur="1.9s" repeatCount="indefinite"></animateTransform> </circle> </g> </g> </svg>
+      <%- image_tag("images/placeholder.png", {alt:post.title, class: "thumbnail preload", "data-url": post.image}) %>
+      <div class="read-icon"> <svg><use xlink:href="#icon-read"></use></svg> </div>
+      </div>
+    <% } %>
     <div
       class=" overflow-hidden pb-2 flex basis-custom justify-between flex-col ">
-      <% if (post.image){ %>
-        <div>
-        <%- image_tag(post.image, {alt:post.title, class: null}) %>
-        </div>
-      <% } %>
 
           <% if (post.link || post.title){ %>
             <div class="container  px-3.5">
@@ -20,7 +22,7 @@
 
 
           <% if (post.description){ %>
-            <div class="container  px-3.5">
+            <div class="container  px-3.5 mb-5">
               <p>
                 <%- post.description %>
               </p>
@@ -39,6 +41,7 @@
             <% } %>
           <% } else { %>
           <% } %>
+      <%- partial('post/tag') %>
 
 
     </div>

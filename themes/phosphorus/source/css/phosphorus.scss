@@ -7,8 +7,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 
-body{
-    > main{
+body {
+    >main {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -21,4 +21,103 @@ body{
 #canvas {
     display: block;
     position: absolute;
+}
+
+
+.tag-name {
+    height: 1.875rem;
+    line-height: 1.625rem;
+    color: #fff;
+    padding: 0 0.625rem;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    display: inline-block;
+    margin: 0 0.625rem 0.625rem 0;
+    z-index: 50;
+}
+
+.article-item:hover img.thumbnail {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    transform: scale(1.05);
+}
+
+.article-item .read-icon {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "";
+    width: 5rem;
+    height: 5rem;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2.5rem;
+    margin-left: -2.5rem;
+    border: 2px solid #fff;
+    color: #ff0a16;
+    z-index: 4;
+}
+
+.article-item:hover .read-icon {
+    opacity: 1;
+}
+
+.article-item .cover {
+    position: relative;
+    min-height: 50px;
+    display: block;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.article-item img.thumbnail {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    transition: all 0.2s ease-in-out;
+}
+
+.article-item .cover .loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    color: #ff0a16;
+    z-index: 1;
+}
+
+.cover .read-icon svg {
+    width: 3rem;
+}
+
+
+.masonry-container .article-container {
+    opacity: 0;
+}
+
+.masonry-container .article-container.shown {
+    opacity: 1;
+}
+
+.masonry-container .article-container.animate {
+    animation: moveUp 0.65s;
+    opacity: 1;
+}
+
+@keyframes moveUp {
+    from {
+        transform: translateY(200px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
