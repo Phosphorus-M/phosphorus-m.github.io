@@ -1,0 +1,27 @@
+<section class="hero min-h-[90%] relative justify-items-start" style="background-image: url(<%= post.image %>)">
+    <div class="pixels"></div>
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="gradient"></div>
+    <div class="hero-content flex-col pl-3 w-full">
+        <div class="flex flex-col text-white font-['Titillium_Web'']">
+
+            <time datetime="<%= date_xml(post.date) %>" class="date text-base font-['Titillium_Web'']">
+                <%= date(post.date, "MM.D.YYYY" ) %>
+            </time>
+            <h1 class="title text-9xl mb-5 font-bold m-0 font-['Titillium_Web'']" style="text-shadow: 1px 1px 2px rgb(0 0 0 / 50%)">
+                <%- post.title %>
+            </h1>
+            <p class="description text-xl m-0 font-['Titillium_Web'']" style="text-shadow: 1px 1px 2px rgb(0 0 0 / 50%)">
+                <%- post.description %>
+            </p>
+            <div class="mt-12">
+                <a href="<%- url_for(post.link) %>" role="button" class="inline-flex font-bold text-white bg-[rgba(0,0,0,0.6)] rounded px-2 py-4 transition-all duration-300 hover:bg-[rgba(255,255,255,0.5)] shadow-md"> 
+                    <svg class="align-middle mr-2 w-6 h-6 text-[#ff0a16]">
+                        <use xlink:href="#icon-read"></use>
+                    </svg> <span class="align-middle">Leer ahora</span> 
+                </a>
+            </div>
+        </div>
+    </div>
+
+</section>

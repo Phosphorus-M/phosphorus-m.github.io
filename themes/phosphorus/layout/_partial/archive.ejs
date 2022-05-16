@@ -1,7 +1,8 @@
+<%- partial('hero', {post: site.posts.sort("-date").data[0]}) %>
 <div class="masonry-container" id="masonry-container">
 
 <% if (pagination == 2){ %>
-    <% site.posts.sort("-date").forEach(function(post){ %>
+    <% site.posts.sort("-date").slice(1).forEach(function(post){ %>
       <%- partial('article', {post: post, index: true}) %>
     <% }) %>
   
