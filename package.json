@@ -20,7 +20,7 @@
     "hexo-auto-canonical": "^0.1.1",
     "hexo-canonical-link": "^2.0.0",
     "hexo-enhancer": "^1.0.10",
-    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-seo-friendly-sitemap": "^0.2.1",
