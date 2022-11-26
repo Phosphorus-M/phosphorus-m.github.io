@@ -2,6 +2,11 @@
 <html lang="es" class="scroll-smooth" data-theme="">
 <%- partial('_partial/head') %>
 
+<% if ("blog/index.html" == page.path){ %>
+    <%- partial('blog') %>
+
+    <% } %>
+
     <% if (page.layout==="another_layout" && page.show==="list" ){ %>
     <body class="bg-[#141414]">
     <% } else { %>

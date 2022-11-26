@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 
-@layer utilities {c
+@layer utilities {
     .masonry-container {
         position: relative;
         margin: 20px auto 60px auto;

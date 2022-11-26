@@ -31,6 +31,9 @@
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,700" rel="stylesheet">
 
     <meta name="theme-color" content="#663399"/>
-    <%- css('css/tailwind') %>
-    <%- css('css/phosphorus') %>
+    <%- css('css/pages/home') %>
+    <% if (page.title==="experience" ){ %>
+        <%- css('css/pages/home') %>
+    <% } %>
+
 </head>
