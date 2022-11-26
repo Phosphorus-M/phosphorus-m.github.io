@@ -15,7 +15,7 @@
     "@jiangtj/hexo-next-pwa": "^3.0.2",
     "@tailwindcss/typography": "^0.5.2",
     "daisyui": "2.6.0",
-    "hexo": "^6.0.0",
+    "hexo": "^6.3.0",
     "hexo-all-minifier": "^0.5.7",
     "hexo-auto-canonical": "^0.1.1",
     "hexo-canonical-link": "^2.0.0",
