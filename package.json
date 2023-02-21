@@ -12,7 +12,7 @@
     "version": "6.0.0"
   },
   "dependencies": {
-    "@jiangtj/hexo-next-pwa": "^3.0.2",
+    "@jiangtj/hexo-next-pwa": "^3.0.3",
     "@tailwindcss/typography": "^0.5.2",
     "daisyui": "2.6.0",
     "hexo": "^6.0.0",
